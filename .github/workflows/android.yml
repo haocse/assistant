@@ -22,7 +22,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - run: eas build --platform android --profile preview --non-interactive
       - run: eas build:download --platform android --profile preview --path app.apk
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: app-apk
           path: app.apk
